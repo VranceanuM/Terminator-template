@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="css/main.css" />
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Materialize Theme</title>
+</head>
+
+<body>
+  <header id="about-header">
+
+    <nav class="transparent z-depth-0">
+      <div class="nav-wrapper">
+      
+        <a href="#" data-activates="mobile-nav" id="nomove" class="button-collapse show-on-large">
+          <i class="material-icons">menu</i>
+        </a>
+        <div class="container">
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a href="index.html">Movie</a>
+          </li>
+          <li>
+            <a href="about.html">About</a>
+          </li>
+          <li>
+            <a href="actors.html">Actors</a>
+          </li>
+        </ul>
+      </div>
+      <ul class="side-nav" id="mobile-nav">
+        <li>
+          <a href="index.html">Movie</a>
+        </li>
+        <li>
+          <a href="about.html">About</a>
+        </li>
+        <li>
+          <a href="actors.html">Actors</a>
+        </li>
+      </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Main section -->
+  <div class="container">
+      <h2 class="center">The Terminator
+        </h2>
+      <div class="row">
+         <div class="col s12 m6">
+             <img src="./img/movie.jpg" id="img" alt="">
+         </div>
+         <div class="col s12 m6">
+                <p class="flow-text">
+                        The Terminator is a 1984 American science-fiction action film directed by James Cameron. It stars Arnold Schwarzenegger as the Terminator, a cyborg assassin sent back in time from 2029 to 1984 to kill Sarah Connor (Linda Hamilton), whose son will one day become a savior against machines in a post-apocalyptic future. Michael Biehn plays Kyle Reese, a soldier from the future sent back in time to protect Connor. The screenplay is credited to Cameron, along with producer Gale Anne Hurd. Executive producers John Daly and Derek Gibson of Hemdale Film Corporation were instrumental in the film's financing and production
+                </p>
+         </div>
+      </div>
+  </div>
+  
+  <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Don't forget to subscribe</h5>
+            <p class="grey-text text-lighten-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid possimu</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2055 The Future is here
+        <a class="grey-text text-lighten-4 right" href="#!">
+          <i class="material-icons">star</i>
+          <i class="material-icons star" >star</i>
+          <i class="material-icons">star</i>
+        </a>
+        </div>
+      </div>
+    </footer>
+   
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Custom JS & jQuery here
+      $('.button-collapse').sideNav();
+      $('.modal').modal();
+
+      //scorlfire
+      const options = [
+        {
+          selector:'.row-1' , offset:150,  callback:function(el){
+            Materialize.fadeInImage($(el));
+          }
+        },
+        {
+          selector:'.row-2' , offset:200,  callback:function(el){
+            Materialize.fadeInImage($(el));
+          }
+        },
+        {
+          selector:'.row-3' , offset:300,  callback:function(el){
+            Materialize.fadeInImage($(el));
+          }
+
+        }
+      
+      ];
+      Materialize.scrollFire(options);
+    });
+  </script>
+</body>
+
+</html>
